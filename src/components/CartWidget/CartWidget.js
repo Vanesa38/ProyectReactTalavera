@@ -3,10 +3,10 @@ import  "../CartWidget/CartWidget.css"
 
 const CartWidget = () => {
    return (
-    <div>
-        <img src={cart} alt="cart" />
-        <span id="contador">0</span>
+   <div>
+            <img src={cart} alt="cart" />
     </div>
+   
    );
 }
 
