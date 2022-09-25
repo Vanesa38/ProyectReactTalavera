@@ -4,31 +4,28 @@ header {
     margin: auto;
     display: flex;
     flex-direction: row;
-    background-color: rgba(253, 247, 247, 0.459);
-    box-shadow: 2px 2px 3px rgba(110, 107, 107, 0.781);
-}
-
-.img-logo {
-    width: 30%;
-    padding: 5px;
+    background-color: white;
+    box-shadow: 2px 2px 2px rgba(110, 107, 107, 0.781);
 }
 
 .img-logo img {
     width: 150px;
     height: 90px;
+    padding: 5px;
 }
 
 nav {
-    width: 90%;
+    width: 70%;
     height: auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 5px;
 }
 
 nav ul {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -36,7 +33,7 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    width: 50px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,19 +44,22 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     color: black;
-    padding: 5px;
+    padding: 2px;
     border-radius: 5px;
     font-family: sans-serif;
 
 }
 
-.cart {
-    height: 5px;
-    width: 5px;
+body {
+    background-color: rgb(236, 219, 219);
+
 }
 
-.cart a {
-    border-radius: none;
+.cart {
+    width:  5px;
+    height: 5px;
 }
+
+
 
 
