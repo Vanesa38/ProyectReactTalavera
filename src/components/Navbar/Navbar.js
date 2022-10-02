@@ -1,6 +1,7 @@
 import logo from "../../logosushi1.png";
 import "./Navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
+
 export default function Navbar() {
     return(
         <div>
