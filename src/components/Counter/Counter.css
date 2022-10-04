@@ -1,0 +1,10 @@
+.contador {
+    
+display: flex;
+flex-direction:row;
+justify-content:  center;
+}
+
+.elements {
+    margin:10px;
+}
