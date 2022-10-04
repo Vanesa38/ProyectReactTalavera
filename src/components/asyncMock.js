@@ -4,7 +4,7 @@ const products = [
         name: 'PhiladelfiaRoll', 
         price: 1000, 
         category: 'SushiRoll', 
-        img: "..public/img/PhiladelfiaRoll.PNG", 
+        img: "/img/PhiladelfiaRoll.PNG", 
         stock: 15, 
         description:'---'
     },
@@ -13,7 +13,7 @@ const products = [
         name: 'HuancainaRoll', 
         price: 1000, 
         category: 'SushiRoll', 
-        img: "../public/img/huancainaRoll.PNG", 
+        img: "/img/huancainaRoll.PNG", 
         stock: 15, 
         description:'---'
     },
@@ -22,7 +22,7 @@ const products = [
         name: 'HawaiRoll', 
         price: 1000, 
         category: 'SushiRoll', 
-        img: "../public/img/HawaiRoll.PNG", 
+        img: "/img/HawaiRoll.PNG", 
         stock: 10, 
         description:'---'
 },
@@ -31,7 +31,7 @@ const products = [
         name: 'CordobaRoll', 
         price: 1000, 
         category: 'SushiRoll', 
-        img: "../public/img/CordobaRoll.PNG", 
+        img: "/img/CordobaRoll.PNG", 
         stock: 10, 
         description:'---'
 },
@@ -40,7 +40,7 @@ const products = [
         name: 'Combinado Sushi Cordoba 15p', 
         price: 1900, 
         category: 'CombinadoSushi', 
-        img: "../public/img/CombinadoSushiCordoba15p.PNG", 
+        img: "/img/CombinadoSushiCordoba15p.PNG", 
         stock: 20, 
         description:'---'
 },
@@ -49,7 +49,7 @@ const products = [
         name: 'Combinado Blue Sea 15p', 
         price: 1900, 
         category: 'CombinadoSushi', 
-        img: "../public/img/CombinadoBlueSea15p.PNG", 
+        img: "/img/CombinadoBlueSea15p.PNG", 
         stock: 15, 
         description:'---'
 },
@@ -58,7 +58,7 @@ const products = [
         name: 'Combinado Roll & Roll 30p', 
         price: 3500, 
         category: 'CombinadoSushi', 
-        img: "../public/img/CombinadoRoll&Roll30p.PNG", 
+        img: "/img/CombinadoRoll&Roll30p.PNG", 
         stock: 10, 
         description:'---'
 },
@@ -67,7 +67,7 @@ const products = [
         name: 'Combinado Intense 30p', 
         price: 3500, 
         category: 'CombinadoSushi', 
-        img: "../public/img/CombinadoIntense30p.PNG", 
+        img: "/img/CombinadoIntense30p.PNG", 
         stock: 15, 
         description:'---'  
 }

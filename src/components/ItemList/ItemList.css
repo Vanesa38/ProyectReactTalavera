@@ -1,0 +1,10 @@
+.cardContainer{
+    display: flex;
+    flex-wrap: no-wrap;
+}
+
+.cards{
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+}
