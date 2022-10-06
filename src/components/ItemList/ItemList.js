@@ -1,6 +1,8 @@
 import Item from "../Item/Item"
 import "../ItemList/ItemList.css"
 
+
+
 const ItemList = ({products}) => {
     return (
         <div className="contenedorLista">
@@ -19,6 +21,9 @@ const ItemList = ({products}) => {
                 <div className="price">
                     <h5>{prod.price}</h5>
                 </div>
+                <div className="buttonComprar">
+              <button>Comprar</button>
+            </div>
             </div>
             );
           })}
