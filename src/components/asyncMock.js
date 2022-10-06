@@ -37,7 +37,7 @@ const products = [
 },
 { 
         id: '5', 
-        name: 'Combinado Sushi Cordoba 15p', 
+        name: 'Combinado Cordoba 15p', 
         price: 1900, 
         category: 'CombinadoSushi', 
         img: "/img/CombinadoSushiCordoba15p.PNG", 
