@@ -50,14 +50,14 @@
     text-transform: uppercase;
 }
 
-.buttonComprar {
+.buttonVerdetalle {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 5px;
 }
 
-.buttonComprar button {
+.buttonVerdetalle button {
     width: 60%;
     height: 50px;
     padding: 5px;
@@ -70,7 +70,7 @@
     cursor: pointer;
 }
 
- .buttonComprar button:hover {
+ .buttonVerdetalle button:hover {
     background-color: red;
     color: #fff;
     border: 2px solid black;

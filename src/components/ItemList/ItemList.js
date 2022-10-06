@@ -21,8 +21,8 @@ const ItemList = ({products}) => {
                 <div className="price">
                     <h5>{prod.price}</h5>
                 </div>
-                <div className="buttonComprar">
-              <button>Comprar</button>
+                <div className="buttonVerdetalle">
+              <button>Ver detalle</button>
             </div>
             </div>
             );
