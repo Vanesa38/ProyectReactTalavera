@@ -1,0 +1,23 @@
+.containerDetail {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 20%;
+    margin: 20px auto;
+    font-size: 10px;
+    background-color:  rgb(248, 226, 226);
+    color: black;
+    border-radius: 2px;
+}
+
+.containerDetail img{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 50%;
+    height: 40%;
+    border-radius: 5px;
+}

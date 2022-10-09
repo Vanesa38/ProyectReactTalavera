@@ -6,7 +6,7 @@ const products = [
         category: 'SushiRoll', 
         img: "/img/PhiladelfiaRoll.PNG", 
         stock: 15, 
-        description:'---'
+        description:'Relleno de Salmon y queso crema, con sesamo'
     },
     { 
         id: '2',
@@ -77,6 +77,14 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
+        }, 2000)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find (prod => prod.id === id))
         }, 2000)
     })
 }

@@ -3,7 +3,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
 }
 
@@ -31,9 +31,10 @@
 
 .imageCard img {
     width: 100%;
-    height: 270px;
+    height: 250px;
     margin: auto;
     border-radius: 15px;
+    border: solid black;
 }
 
 .detailsCard {
@@ -45,7 +46,7 @@
     width: 100%;
     text-align: center;
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -64,14 +65,14 @@
     background-color: #747174;
     border: hidden;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 15px;
     font-family: sans-serif;
     font-weight: bold;
     cursor: pointer;
 }
 
  .buttonVerdetalle button:hover {
-    background-color: red;
+    background-color: rgb(177, 162, 162);
     color: #fff;
     border: 2px solid black;
 }
