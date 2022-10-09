@@ -15,7 +15,7 @@ const products = [
         category: 'SushiRoll', 
         img: "/img/huancainaRoll.PNG", 
         stock: 15, 
-        description:'---'
+        description:'Relleno de langostinos y palta, con salmón por fuera, bañado en salsa huancaína, sésamo, cilantro y crocante de batata'
     },
     {
         id: '3', 

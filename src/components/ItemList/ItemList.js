@@ -19,10 +19,10 @@ const ItemList = ({products}) => {
                   <h3>{prod.category}</h3>
                 </div>
                 <div className="price">
-                    <h5>{prod.price}</h5>
+                    <h5> ${prod.price}</h5>
                 </div>
                 <div className="buttonVerdetalle">
-              <button>Ver detalle</button>
+              <button>Ver Detalle</button>
             </div>
             </div>
             );

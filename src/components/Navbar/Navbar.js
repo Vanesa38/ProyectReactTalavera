@@ -1,6 +1,7 @@
 import logo from "../../logosushi1.png";
 import "./Navbar.css";
 import CartWidget from "../CartWidget/CartWidget";
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     return(
@@ -12,13 +13,15 @@ export default function Navbar() {
                 <nav>
                     <ul>
                         <li>
-                            <a href="">HOME</a>
+                        <Link to = '/'>
+                          <h1>Home</h1> 
+                        </Link>
                         </li>
                         <li>
-                            <a href="">PRODUCTOS</a>
+                            <a href="">SUSHI</a>
                         </li>
                         <li>
-                            <a href="">CONTACTO</a>
+                            <a href="">COMBINADOS</a>
                         </li>
                         <li className="cart">
                             <a href="">
