@@ -4,26 +4,26 @@ import CartWidget from "../CartWidget/CartWidget";
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {
-    return(
+    return (
         <div>
             <header>
-                <div className= "img-logo">
-                    <img src={logo} alt= "logo" />
+                <div className="img-logo">
+                    <img src={logo} alt="logo" />
                 </div>
                 <nav>
                     <ul>
                         <li>
-                        <Link to = '/'>
-                          <h1>Home</h1> 
-                        </Link>
+                            <Link to='/'>
+                                <h1>Home</h1>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">SUSHI</a>
+                            <a href="">SushiRoll</a>
                         </li>
                         <li>
-                            <a href="">COMBINADOS</a>
+                            <a href="">CombinadoSushi</a>
                         </li>
-                        <li className="cart">
+                        <li >
                             <a href="">
                                 <CartWidget />
                             </a>

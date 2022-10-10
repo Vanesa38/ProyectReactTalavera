@@ -3,33 +3,9 @@
     width: 100%;
     justify-content:center;
     flex-direction: row;
+    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
-    margin: 20px auto;
+    margin:10px auto;
 
-}
-
-.buttonVerdetalle {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-}
-
-.buttonVerdetalle button {
-    width: 60%;
-    height: 50px;
-    padding: 5px;
-    background-color: #747174;
-    border: hidden;
-    border-radius: 5px;
-    font-size: 15px;
-    font-family: sans-serif;
-    font-weight: bold;
-    cursor: pointer;
-}
-
- .buttonVerdetalle button:hover {
-    background-color: rgb(177, 162, 162);
-    color: #fff;
-    border: 2px solid black;
 }

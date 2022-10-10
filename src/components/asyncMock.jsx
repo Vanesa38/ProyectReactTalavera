@@ -24,7 +24,7 @@ const products = [
         category: 'SushiRoll', 
         img: "/img/HawaiRoll.PNG", 
         stock: 10, 
-        description:'---'
+        description:'Relleno de salmón ahumado y palta, recubierto por tataki de salmón aderezado con merken, bañado con salsa picante y maíz cancha.'
 },
 { 
         id: '4', 
@@ -33,7 +33,7 @@ const products = [
         category: 'SushiRoll', 
         img: "/img/CordobaRoll.PNG", 
         stock: 10, 
-        description:'---'
+        description:'Relleno de salmón, langostinos, palta y queso crema, con salmón por fuera y salsa de sésamo.'
 },
 { 
         id: '5', 
@@ -42,7 +42,7 @@ const products = [
         category: 'CombinadoSushi', 
         img: "/img/CombinadoSushiCordoba15p.PNG", 
         stock: 20, 
-        description:'---'
+        description:' Cordoba Roll, Placer Real, Feel Roll, Honey Roll, Philadelphia Roll, Sashimi de Salmón y Niguiri de Salmón.'
 },
 {
         id: '6', 
@@ -51,7 +51,7 @@ const products = [
         category: 'CombinadoSushi', 
         img: "/img/CombinadoBlueSea15p.PNG", 
         stock: 15, 
-        description:'---'
+        description:'Cordoba Roll, Celerity Roll, Feel Roll, Soul Roll, Niguiri Fuego Thai. Incluye salsa'
 },
 {
         id: '7', 
@@ -60,7 +60,7 @@ const products = [
         category: 'CombinadoSushi', 
         img: "/img/CombinadoRoll&Roll30p.PNG", 
         stock: 10, 
-        description:'---'
+        description:'Placer Real, Soul Roll, Feel Roll, Geishas de Salmón, Futurama Roll, Sweet Roll, SPF Roll.'
 },
 {
         id: '8', 
@@ -69,7 +69,7 @@ const products = [
         category: 'CombinadoSushi', 
         img: "/img/CombinadoIntense30p.PNG", 
         stock: 15, 
-        description:'---'  
+        description:' Placer Real, Merken Roll, Sweet Roll, Feel Roll, Sashimi de salmón, Niguiri Anticuchero.'  
 }
 ]
 
@@ -77,7 +77,7 @@ export const getProducts = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products)
-        }, 2000)
+        }, 1000)
     })
 }
 
@@ -85,7 +85,15 @@ export const getProductById = (id) => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(products.find (prod => prod.id === id))
-        }, 2000)
+        }, 1000)
+    })
+}
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(products.filter(prod => prod.category === categoryId))
+        }, 500)
     })
 }
     

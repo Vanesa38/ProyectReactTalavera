@@ -1,18 +1,13 @@
 .container-widget {
     display: flex;
     flex-direction: row;
-
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+}
+.container-widget p{
+    font-size: 20px;
+    margin-left: 5px;
 }
 
-.widget img {
-    width: 2px;
-    height: 2px;
-}
-
-#cart {
-    align-self: flex-end;
-}
-
-#contador {
-    color: rgb(27, 27, 27);
-}
