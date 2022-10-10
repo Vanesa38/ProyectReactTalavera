@@ -14,14 +14,18 @@ export default function Navbar() {
                     <ul>
                         <li>
                             <Link to='/'>
-                                <h1>Home</h1>
+                              <li id="item">Home</li>
                             </Link>
                         </li>
                         <li>
-                            <a href="">SushiRoll</a>
+                            <Link to= '/category/SushiRoll'>
+                            <a id="item">SushiRoll</a>
+                            </Link>
                         </li>
                         <li>
-                            <a href="">CombinadoSushi</a>
+                            <Link to= '/category/CombinadoSushi'>
+                            <a id="item">CombinadoSushi</a>
+                            </Link>
                         </li>
                         <li >
                             <a href="">
