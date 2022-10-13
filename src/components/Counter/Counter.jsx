@@ -23,7 +23,6 @@ const Counter = () => {
 
     return (
         <div>
-            <h1>Contador</h1>
 
             <div className="contador">
                 <button className="elements" onClick={decrement}> - </button> 

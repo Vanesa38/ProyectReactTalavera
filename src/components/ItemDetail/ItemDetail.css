@@ -27,3 +27,29 @@
     justify-content: center;
     width: 100%;
 }
+
+.buttonagregaralcarro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.buttonagregaralcarro button {
+    width: 60%;
+    height: 50px;
+    padding: 5px;
+    background-color: tomato;
+    border: hidden;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttonagregaralcarro button:hover {
+    background-color: grey;
+    color: #fff;
+    border: 2px solid black;
+}

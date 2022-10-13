@@ -1,8 +1,15 @@
 import'../asyncMock'
 import '../ItemDetail/ItemDetail.css'
 import Counter from '../Counter/Counter'
+import ItemCount from '../ItemCount.jsx/ItemCount'
 
 const ItemDetail = ({ img, name, category, price, description }) => {
+
+const handleOnAdd = () => {
+    console.log(
+        'se agrego al carrito'
+    )
+}
     return (
         
        <div className='containerDetail'>
@@ -12,8 +19,11 @@ const ItemDetail = ({ img, name, category, price, description }) => {
             <p className="price"> ${price}</p>
             <p className= "description ">{description}</p> 
             <Counter/>
-        </div> 
-
+            <button id='buttonagregaralcarro' className='carro'>agregar al carrito</button>
+            <ItemCount onAdd={handleOnAdd} />
+    
+    </div> 
+    
     )
 }
 
