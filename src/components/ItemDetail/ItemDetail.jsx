@@ -1,14 +1,17 @@
 import'../asyncMock'
 import '../ItemDetail/ItemDetail.css'
-import Counter from '../Counter/Counter'
+import { useState } from 'react'
 import ItemCount from '../ItemCount.jsx/ItemCount'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ img, name, category, price, description }) => {
 
-const handleOnAdd = () => {
-    console.log(
-        'se agrego al carrito'
-    )
+    const [goToCart, setGoToCart] = useState (false)
+
+    const onAdd = (count) => {
+    console.log('se agrego al carrito', (count), 'unidades'  );
+    setGoToCart(true);
+        
 }
     return (
         
@@ -18,9 +21,10 @@ const handleOnAdd = () => {
             <h3 className="category">{category}</h3>
             <p className="price"> ${price}</p>
             <p className= "description ">{description}</p> 
-            <Counter/>
-            <button id='buttonagregaralcarro' className='carro'>agregar al carrito</button>
-            <ItemCount onAdd={handleOnAdd} />
+            { goToCart
+                ? <Link to='/cart'>Terminar Compra</Link>
+                :<ItemCount onAdd={onAdd}/>
+            }
     
     </div> 
     

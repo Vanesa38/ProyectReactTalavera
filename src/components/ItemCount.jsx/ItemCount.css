@@ -1,0 +1,48 @@
+.contador {
+display: flex;
+flex-direction:row;
+justify-content:  center;
+border-style: solid;
+
+}
+
+.elements {
+    margin:10px;
+}
+
+#cartButton{
+    width: 100%;
+    margin: auto;
+    border: black;
+    border-style: solid;
+    
+}
+
+#cartButton button{
+    width: 60%;
+    height: 50px;
+    padding: 5px;
+    background-color: tomato;
+    border: hidden;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#cartButton button:hover{
+    background-color: grey;
+    color: #fff;
+    border: 2px solid black;
+}
+
+#addButton{
+    background-color: whitesmoke;
+
+}
+
+#subsButton{
+    background-color: whitesmoke;
+
+}
