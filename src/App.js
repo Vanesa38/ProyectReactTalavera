@@ -14,8 +14,9 @@ function App() {
 
   return (
     <div className="App">
-      <CartProvider>
+    
       <BrowserRouter>
+      <CartProvider>
       <Navbar />
       <Routes>
         <Route path= '/' element= {<ItemListContainer/>} />
@@ -24,8 +25,9 @@ function App() {
         <Route path='*' element={<h1>404 NOT FOUND</h1>} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
-      </BrowserRouter>
       </CartProvider>
+      </BrowserRouter>
+      
       
      
     </div>

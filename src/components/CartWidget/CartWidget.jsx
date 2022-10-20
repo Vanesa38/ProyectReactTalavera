@@ -11,10 +11,14 @@ const CartWidget = () => {
                 <div className="widget">
                         <img src={cart} alt="cart" />
                 </div>
-                </div>
+                <div className="cart-span">
+                 <sup>{totalQuantity}</sup>
+               </div>
+               </div>
         
         
         );
 }
+
 
 export default CartWidget
