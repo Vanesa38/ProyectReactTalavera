@@ -9,7 +9,7 @@ const ItemDetail = ({id, img, name, category, price, description, stock }) => {
 
     const [goToCart, setGoToCart] = useState (false)
 
-    const {addProduct} = useCart ( );
+    const {addItem} = useCart ( );
 
     const onAdd = (count) => {
         const productToAdd = {
@@ -20,7 +20,7 @@ const ItemDetail = ({id, img, name, category, price, description, stock }) => {
             description
         }
         setGoToCart(true);
-        addProduct (productToAdd, count);
+        addItem (productToAdd, count);
         
 }
     return (
