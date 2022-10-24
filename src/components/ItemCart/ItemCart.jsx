@@ -1,12 +1,13 @@
 import React from 'react'
 import '../ItemCart/ItemCart.css'
 import '../asyncMock'
-import { useCartContext } from '../../CartContext/CartContext'
+import { CartContext } from '../../CartContext/CartContext'
+import { useContext } from 'react'
 
 
 
 const ItemCart = ({id, img, name, price, quantity}) => {
-    const {removeProduct} = useCartContext ();
+    const {removeItem} = useContext (CartContext);
 
 return (    
     <div className='containerCart'>
@@ -14,7 +15,7 @@ return (
         <h1 className="name">{name}</h1>
         <p className="price">Precio U: ${price}</p>
         <p className="SubTotal">Subtotal: ${quantity * price}</p>
-        <button onClick={()=>removeProduct(id)}> Eliminar</button>
+        <button onClick={()=>removeItem(id)}> Eliminar</button>
 
     </div>
 )

@@ -1,0 +1,32 @@
+.Cart {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    color: black;
+    font-variant: all-petite-caps;
+    margin: 100px 0px;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.title-products {
+    margin: 5px;
+    color: #1b1b8d;
+}
+
+tr:hover {
+    background-color: lightgrey;
+}
+
+.button-cart {
+    padding: 5px 15px;
+    margin: auto;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(45, 104, 192);
+    cursor: pointer;
+    background-color: aliceblue;
+    box-shadow: 0 5px 10px hsl(206deg 81% 75%);
+}
