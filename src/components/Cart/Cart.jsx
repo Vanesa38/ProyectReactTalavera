@@ -1,21 +1,22 @@
+
 import { useContext } from "react";
 import { CartContext } from "../../CartContext/CartContext";
 import ItemCart from "../ItemCart/ItemCart";
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"
 import "./Cart.css"
 
 const Cart = () => {
-    const {Cart, total, clearCart} = useContext (CartContext)
+    const {cart, total, getTotal, clearCart} = useContext (CartContext)
 
-    console.log (Cart);
-    if (Cart.length === 0){
-    return (
-        <div className="Cart">
-            <h1 className="title-products">No tienes productos seleccionados</h1>
-            <Link to='/' className="button-finish">Volver al listado</Link>
-        </div>
-    )
-}
+    console.log (cart);
+    if (cart.length === 0) {
+        return (
+            <div className="Cart">
+                <h1 className="title-products">No tienes productos seleccionados</h1>
+                <Link to='/' className="button-finish">Volver al listado</Link>
+            </div>
+        )
+    }
 
 return ( 
     <div className="Cart">
@@ -34,13 +35,15 @@ return (
         </thead>
         <tbody>
         {
-            Cart.map(product => <ItemCart key={product.id} product={product} /> )
-        }
+            cart.map(product =>
+                <ItemCart key={product.id} {...product} />)
+                }
+           
 
         </tbody>
         </table>
-        <h3>Cantidad total de productos: {total}</h3>
-        <h1 className="title-products">Total: ${total()}</h1>
+        <h3>Cantidad total de productos: {}</h3>
+        <h1 className="title-products">Total: ${getTotal()}</h1>
         <button className="button-cart" onClick={clearCart}>Eliminar todo</button>
     </div>
  );

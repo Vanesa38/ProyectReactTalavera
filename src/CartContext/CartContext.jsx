@@ -11,8 +11,8 @@ export const CartContext = createContext({
   export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0)
-  const [total, setTotal] = useState(0)
-  console.log("carrito:", cart);
+  
+  console.log(cart, 'CartContext');
   console.log("contador:",totalQuantity)
 
   useEffect(() => {
@@ -58,6 +58,14 @@ export const CartContext = createContext({
     const productLess = cart.filter((prod) => prod.id !== id);
     setCart(productLess);
   };
+
+  const getTotal = () => {
+    let total = 0
+    cart.forEach(prod => {
+        total = total + prod.price * prod.quantity
+    })
+    return total
+  }
 
   // función para limpiar el carrito
   const clearCart = () => {
