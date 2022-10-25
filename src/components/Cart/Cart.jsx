@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 import "./Cart.css"
 
 const Cart = () => {
-    const {cart, getTotal, clearCart, Comprar} = useContext (CartContext)
+    const {cart, getTotal, clearCart, Checkout} = useContext (CartContext)
 
     console.log (cart);
     if (cart.length === 0) {
@@ -31,7 +31,7 @@ return (
         <h1 className="title-products">Total: ${getTotal()}</h1>
         <button className="button-cart" onClick={clearCart}>Eliminar todo</button>
         <div>
-        <button className="button-cart" onClick={Comprar}>Comprar</button>
+        <button className="button-cart" onClick={Checkout}>Checkout</button>
     </div>
 </div>
         
