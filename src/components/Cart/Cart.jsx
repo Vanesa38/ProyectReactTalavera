@@ -6,7 +6,7 @@ import {Link} from "react-router-dom"
 import "./Cart.css"
 
 const Cart = () => {
-    const {cart, getTotal, clearCart} = useContext (CartContext)
+    const {cart, getTotal, clearCart, Comprar} = useContext (CartContext)
 
     console.log (cart);
     if (cart.length === 0) {
@@ -21,32 +21,23 @@ const Cart = () => {
 return ( 
     <div className="Cart">
         <h1 className="title-products">Tus productos:</h1>
-        <hr></hr>
-        <table>
-        <thead>
-            <tr>
-                <th>id:</th>
-                <th>Producto:</th>
-                <th>Cantidad:</th>
-                <th>Precio:</th>
-                <th>Subtotal:</th>
-                <th>Eliminar:</th>
-            </tr>
-        </thead>
-        <tbody>
+        
         {
             cart.map(product =>
                 <ItemCart key={product.id} {...product} />)
                 }
            
-
-        </tbody>
-        </table>
         <h3>Cantidad total de productos: {}</h3>
         <h1 className="title-products">Total: ${getTotal()}</h1>
         <button className="button-cart" onClick={clearCart}>Eliminar todo</button>
+        <div>
+        <button className="button-cart" onClick={Comprar}>Comprar</button>
     </div>
- );
+</div>
+        
+     );  
+    
+ 
 }
 
 export default Cart;

@@ -1,0 +1,22 @@
+.containerCart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 25%;
+    margin: 15px auto;
+    background-color:rgb(205, 202, 202);
+    padding: 15px;
+    box-shadow: 2px 1px 1px #474747b2;
+    border-radius: 5px;
+}
+
+.containerCart img{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 15px auto;
+    width: 30%;
+    height: 30%;
+}
