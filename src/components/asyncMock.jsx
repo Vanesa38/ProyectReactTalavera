@@ -42,7 +42,7 @@ const products = [
         category: 'CombinadoSushi', 
         img: "/img/CombinadoSushiCordoba15p.PNG", 
         stock: 20, 
-        description:' Cordoba Roll, Placer Real, Feel Roll, Honey Roll, Philadelphia Roll, Sashimi de Salmón y Niguiri de Salmón.'
+        description:'Cordoba Roll, Placer Real, Feel Roll, Honey Roll, Philadelphia Roll, Sashimi de Salmón y Niguiri de Salmón.'
 },
 {
         id: '6', 

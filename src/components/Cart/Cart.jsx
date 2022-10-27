@@ -27,7 +27,7 @@ return (
                 <ItemCart key={product.id} {...product} />)
                 }
            
-        <h3>Cantidad total de productos: {}</h3>
+      
         <h1 className="title-products">Total: ${getTotal()}</h1>
         <button className="button-cart" onClick={clearCart}>Eliminar todo</button>
         <div>
