@@ -88,7 +88,7 @@ import Swal from 'sweetalert2'
                     }, 2000)
                     console.log('success', `El id de su orden es: ${orderAdded.id}`)
                 } else {
-                    console.log('error','hay productos que estan fuera de stock')
+                    console.log('error','hay productos que estan fuera del stock disponible')
                 }
     
             } catch (error) {
@@ -99,12 +99,12 @@ import Swal from 'sweetalert2'
             
         }
         if(loading) {
-            return <h1>Se esta procesando su pedido...</h1>
+            return <h1>Procesando su pedido...</h1>
         }
     
         return (    
             <div>
-                <h1>Completa los datos para generar la orden.</h1>
+                <h1>Completa los datos para generar la orden de compra.</h1>
                 <div className='myForm1' >
                     <input  value={name} onChange={(e) => setName(e.target.value)} type="text"   className="form-input"   placeholder="Nombre" />
                     <input value={address}onChange={(e) => setAddress(e.target.value)}type="text"   className="form-input"   placeholder="Dirección" />
