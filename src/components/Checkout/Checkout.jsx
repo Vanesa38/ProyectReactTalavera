@@ -1,11 +1,11 @@
 import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
 import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
-import { dataBase } from '../../Service/Firebase/index'
+import { dataBase } from '../../Service/Firebase/Index'
 import { useNavigate } from "react-router-dom"
 import Swal from 'sweetalert2'
 
-const Checkout = () => {
+    const Checkout = () => {
     const [loading, setLoading] = useState(false)
 
     const { cart, total, clearCart } = useContext(CartContext)
