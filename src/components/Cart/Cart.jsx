@@ -1,4 +1,3 @@
-
 import { useContext } from "react";
 import { CartContext } from "../../CartContext/CartContext";
 import ItemCart from "../ItemCart/ItemCart";
@@ -31,7 +30,9 @@ return (
         <h1 className="title-products">Total: ${getTotal()}</h1>
         <button className="button-cart" onClick={clearCart}>Eliminar todo</button>
         <div>
-        <button className="button-cart" onClick={Checkout}>Checkout</button>
+            <Link to='/checkout'>
+            <button className="button-cart" onClick={Checkout}>Checkout</button>
+            </Link>
     </div>
 </div>
         

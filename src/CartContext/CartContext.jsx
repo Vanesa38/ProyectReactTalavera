@@ -12,8 +12,7 @@ export const CartContext = createContext({
   const [cart, setCart] = useState([]);
   const [totalQuantity, setTotalQuantity] = useState(0)
   
-  console.log(cart, 'CartContext');
-  console.log("contador:",totalQuantity)
+  
 
   useEffect(() => {
     const getQuantity = () => {
@@ -58,7 +57,7 @@ export const CartContext = createContext({
     const productLess = cart.filter((prod) => prod.id !== id);
     setCart(productLess);
   };
-
+//funcion para sumar el total de la compra
   const getTotal = () => {
     let total = 0
     cart.forEach(prod => {
