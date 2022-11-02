@@ -1,0 +1,24 @@
+.contenedormyForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    margin: 0px;
+    background-color: beige;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: darkslategrey;
+    padding: 15px;
+    margin: 10px;
+    width: 70%;
+}
+
+
+
+
+.buttons-order {
+    display: flex;
+    flex-direction: column;
+}

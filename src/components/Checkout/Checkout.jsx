@@ -1,3 +1,4 @@
+import './Checkout.css'
 import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
 import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
@@ -5,23 +6,24 @@ import { dataBase } from '../../Service/Firebase/Index'
 import { useNavigate } from "react-router-dom"
 import Swal from 'sweetalert2'
 
+
+
+
     const Checkout = () => {
     const [loading, setLoading] = useState(false)
 
-    const { cart, total, clearCart } = useContext(CartContext)
+    const { cart, totalPrice, clearCart } = useContext(CartContext)
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-
-
-
     const navigate = useNavigate()
-    const [personalData, setPersonalData] = useState (false) 
+    const total = totalPrice() 
 
+    
     const submit = (e) => {
         e.preventDefault ();
-        if (!name && !email && !phone && !address)
+        if (!name || !email || !phone || !address)
             {
                 Swal.fire({
                     title: "Completa tus datos",
@@ -31,10 +33,8 @@ import Swal from 'sweetalert2'
             
                 })
             }
-        else 
-        setPersonalData(true);
-        }
 
+   
         const createOrder = async () => {
             setLoading(true)
     
@@ -44,7 +44,7 @@ import Swal from 'sweetalert2'
                         name: {name},
                         address: {address},
                         phone: {phone},
-                        mail: {email}
+                        email: {email}
                     },
                     items: cart,
                     total: total
@@ -105,28 +105,23 @@ import Swal from 'sweetalert2'
         return (    
             <div>
                 <h1>Completa los datos para generar la orden de compra.</h1>
-                <div className='myForm1' >
+                <div className='myForm' >
                     <input  value={name} onChange={(e) => setName(e.target.value)} type="text"   className="form-input"   placeholder="Nombre" />
                     <input value={address}onChange={(e) => setAddress(e.target.value)}type="text"   className="form-input"   placeholder="Dirección" />
                     <input value={email} onChange={(e) => setEmail(e.target.value)} type="email"  className="form-input"   placeholder="Email" />
                     <input value={phone}onChange={(e) => setPhone(e.target.value)} type="number" className="form-input"   placeholder="Teléfono" />
                 </div>
-                <h1>Checkout</h1>
-    
-                {   personalData
-                    ?<button onClick={createOrder}>Generar Pedido</button>
-    
-    
-                    :  <div>
-                        <p>Complete sus datos</p>
-                        <button onClick={submit}> Almacenar datos </button>
-                    </div>
+                <div className="buttons-order">
+
+                    <button onClick={createOrder}>Generar Pedido</button>
+                    <button> Cancelar Pedido </button>
+                </div>
     
                 
-                } 
+            
                 
             </div>
         )
-    }
+        }}
     
-    export default Checkout                
+    export default Checkout
