@@ -3,6 +3,7 @@ import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
 import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
 import { dataBase } from '../../Service/Firebase/Index'
+import NotificationContext from "../../notification/NotificationService.jsx";
 import { useNavigate } from "react-router-dom"
 
 
@@ -13,6 +14,7 @@ import { useNavigate } from "react-router-dom"
     const [loading, setLoading] = useState(false)
 
     const { cart, totalPrice, clearCart } = useContext(CartContext)
+    const {setNotification} = useContext(NotificationContext)
     const [name, setName] = useState("");
     const [address, setAddress] = useState("");
     const [email, setEmail] = useState("");
@@ -52,7 +54,7 @@ import { useNavigate } from "react-router-dom"
                     const stockDb = dataDoc.stock
     
                     const productAddedToCart = cart.find(prod => prod.id === doc.id)
-                    const prodQuantity = productAddedToCart?.Count
+                    const prodQuantity = productAddedToCart?.quantity
     
                     if(stockDb >= prodQuantity) {
                         batch.update(doc.ref, { stock: stockDb - prodQuantity })
@@ -66,16 +68,16 @@ import { useNavigate } from "react-router-dom"
                     const orderRef = collection(dataBase, 'orders')
     
                     const orderAdded = await addDoc(orderRef, objOrder)
+                    console.log(`El id de su orden es: ${orderAdded.id}`)
+                } else {
+                    setNotification('error','Productos fuera del stock disponible')
+                }
     
                     clearCart()
     
                     setTimeout(() => {
                         navigate('/')
                     }, 2000)
-                    console.log('success', `El id de su orden es: ${orderAdded.id}`)
-                } else {
-                    console.log('error','fuera del stock disponible')
-                }
     
             } catch (error) {
                 console.log(error)
