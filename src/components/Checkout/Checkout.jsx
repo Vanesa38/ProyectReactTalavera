@@ -4,7 +4,7 @@ import { CartContext } from "../../CartContext/CartContext"
 import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
 import { dataBase } from '../../Service/Firebase/Index'
 import { useNavigate } from "react-router-dom"
-import Swal from 'sweetalert2'
+
 
 
 
@@ -21,21 +21,7 @@ import Swal from 'sweetalert2'
     const total = totalPrice;
 
     
-    const submit = (e) => {
-        e.preventDefault ();
-        if (!name || !email || !phone || !address)
-            {
-                Swal.fire({
-                    title: "Completa tus datos",
-                    icon: "warning",
-                    buttons: true,
-                    dangerMode: true,
-            
-                })
-            }
-        }
-
-        const createOrder = async () => {
+    const createOrder = async () => {
             setLoading(true)
     
             try {
@@ -88,7 +74,7 @@ import Swal from 'sweetalert2'
                     }, 2000)
                     console.log('success', `El id de su orden es: ${orderAdded.id}`)
                 } else {
-                    console.log('error','hay productos que estan fuera del stock disponible')
+                    console.log('error','fuera del stock disponible')
                 }
     
             } catch (error) {
@@ -100,8 +86,8 @@ import Swal from 'sweetalert2'
         }
         if(loading) {
             return <h1>Procesando su pedido...</h1>
-        }
-    
+            
+        }    
         return (    
             <div>
                 <h1>Completa los datos para generar la orden de compra.</h1>
@@ -115,6 +101,7 @@ import Swal from 'sweetalert2'
 
                     <button onClick={createOrder}>Generar Pedido</button>
                     <button> Cancelar Pedido </button>
+
                 </div>
     
                 
