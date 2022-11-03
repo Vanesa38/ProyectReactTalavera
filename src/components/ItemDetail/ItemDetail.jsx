@@ -3,8 +3,10 @@ import { useCart } from '../../CartContext/CartContext'
 import { useContext, useState } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom'
+import NotificationContext from '../../notification/NotificationService'
 
 const ItemDetail = ({id, img, name, category, price, description, stock }) => {
+    const {setNotification} = useContext(NotificationContext)
 
     const [goToCart, setGoToCart] = useState (false)
 
@@ -18,10 +20,10 @@ const ItemDetail = ({id, img, name, category, price, description, stock }) => {
             price,
             description
         }
-        setGoToCart(true);
         addItem (productToAdd, count);
-        
-}
+        setNotification('success', 'Producto agregado')
+        setGoToCart(true)
+};
     return (
         
        <div className='containerDetail'>
