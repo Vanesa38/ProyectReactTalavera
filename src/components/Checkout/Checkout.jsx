@@ -68,7 +68,7 @@ import { useNavigate } from "react-router-dom"
                     const orderRef = collection(dataBase, 'orders')
     
                     const orderAdded = await addDoc(orderRef, objOrder)
-                    console.log(`El id de su orden es: ${orderAdded.id}`)
+                    setNotification('success',`El id de su orden es: ${orderAdded.id}`)
                 } else {
                     setNotification('error','Productos fuera del stock disponible')
                 }

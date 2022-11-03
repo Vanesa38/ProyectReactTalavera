@@ -1,4 +1,3 @@
-import'../asyncMock'
 import '../ItemDetail/ItemDetail.css'
 import { useCart } from '../../CartContext/CartContext'
 import { useContext, useState } from 'react'

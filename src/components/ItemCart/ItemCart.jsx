@@ -1,6 +1,5 @@
 import React from 'react'
 import '../ItemCart/ItemCart.css'
-import '../asyncMock'
 import { CartContext } from '../../CartContext/CartContext'
 import { useContext } from 'react'
 
