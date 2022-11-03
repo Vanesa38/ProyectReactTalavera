@@ -33,8 +33,8 @@ import Swal from 'sweetalert2'
             
                 })
             }
+        }
 
-   
         const createOrder = async () => {
             setLoading(true)
     
@@ -122,6 +122,6 @@ import Swal from 'sweetalert2'
                 
             </div>
         )
-        }}
+        }
     
     export default Checkout
