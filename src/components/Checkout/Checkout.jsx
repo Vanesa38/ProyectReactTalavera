@@ -17,8 +17,8 @@ import Swal from 'sweetalert2'
     const [address, setAddress] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState("");
-    const navigate = useNavigate()
-    const total = totalPrice() 
+    const navigate = useNavigate();
+    const total = totalPrice;
 
     
     const submit = (e) => {
