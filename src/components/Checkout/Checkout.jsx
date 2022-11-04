@@ -1,7 +1,7 @@
 import './Checkout.css'
 import { useState, useContext } from "react"
 import { CartContext } from "../../CartContext/CartContext"
-import { collection, getDocs, query, where, documentId, writeBatch, addDoc } from 'firebase/firestore'
+import { collection, getDocs, query, where, documentId, writeBatch, addDoc, Timestamp } from 'firebase/firestore'
 import { dataBase } from '../../Service/Firebase/Index'
 import NotificationContext from "../../notification/NotificationService.jsx";
 import { useNavigate } from "react-router-dom"
@@ -29,13 +29,15 @@ import { useNavigate } from "react-router-dom"
             try {
                 const objOrder = {
                     buyer: {
-                        name: {name},
-                        address: {address},
-                        phone: {phone},
-                        email: {email}
+                        name: name,
+                        address: address,
+                        phone: phone,
+                        email: email,
                     },
                     items: cart,
-                    total: total
+                    total: total,
+                    date: Timestamp.fromDate(new Date())
+                    
                 }
 
                 const batch = writeBatch(dataBase)
