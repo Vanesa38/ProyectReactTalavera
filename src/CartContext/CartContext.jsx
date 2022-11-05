@@ -69,7 +69,7 @@ export const CartContext = createContext({
   // función para limpiar el carrito
   const clearCart = () => {
     setCart([]);
-  };
+  }
   
   return (
     <CartContext.Provider value={{ cart, addItem, removeItem, getTotal, clearCart, totalQuantity }}>
