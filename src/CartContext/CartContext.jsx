@@ -70,9 +70,15 @@ export const CartContext = createContext({
   const clearCart = () => {
     setCart([]);
   }
+
+  const getProductQuantity = (id) => {
+    const product = cart.find(prod => prod.id === id)
+
+    return product?.count
+  }
   
   return (
-    <CartContext.Provider value={{ cart, addItem, removeItem, getTotal, clearCart, totalQuantity }}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, getTotal, clearCart, totalQuantity, getProductQuantity }}>
       {children}
     </CartContext.Provider>
   );
