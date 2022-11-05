@@ -79,10 +79,10 @@ import { useNavigate } from "react-router-dom"
         }
       };
     
-       if(loading) {
-           return <h1>Procesando su pedido...</h1>
-    
-       }
+      if(loading) {
+        return <h1>Procesando su pedido...</h1>
+ 
+    }
       return (
         <div>
           <h1>Completa los datos para generar la orden de compra.</h1>
