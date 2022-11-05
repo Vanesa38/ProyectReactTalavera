@@ -53,7 +53,7 @@ import { useNavigate } from "react-router-dom"
         const stockDb = dataDoc.stock;
     
         const productAddedToCart = cart.find((prod) => prod.id === doc.id);
-        const prodQuantity = productAddedToCart?.quantity;
+        const prodQuantity = productAddedToCart?.count;
     
             if (stockDb >= prodQuantity) {
               batch.update(doc.ref, { stock: stockDb - prodQuantity });
