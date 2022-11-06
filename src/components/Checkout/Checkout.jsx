@@ -124,6 +124,11 @@ import { useNavigate } from "react-router-dom"
       );
     };
     
+<<<<<<< HEAD
     
   export default Checkout
     
+=======
+    export default Checkout;
+    
+>>>>>>> e9f7b740155341e4f31a424a9fc5f2e2d194a0d5
