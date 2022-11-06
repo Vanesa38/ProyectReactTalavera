@@ -29,9 +29,9 @@ export const CartContext = createContext({
 }, [cart]);
 
 
-// agregar un producto al carrito
 
-  function addItem(productToAdd, count) {
+
+  const addItem(productToAdd, count) {
         if (!isInCart(productToAdd.id)) {
           productToAdd.count = count
             setCart([...cart, productToAdd]);
@@ -47,17 +47,21 @@ export const CartContext = createContext({
         }
     }
 
-  // función que devuelva true o false 
+  
+    
   const isInCart = (id) => {
     return cart.some((prod) => prod.id === id);
   };
 
-  // función para remover un producto del carrito
+  
+    
   const removeItem = (id) => {
     const productLess = cart.filter((prod) => prod.id !== id);
     setCart(productLess);
   };
-//funcion para sumar el total de la compra
+
+    
+    
   const getTotal = () => {
     let total = 0
     cart.forEach(prod => {
@@ -66,16 +70,20 @@ export const CartContext = createContext({
     return total
   }
 
-  // función para limpiar el carrito
+  
+  
+  
   const clearCart = () => {
     setCart([]);
   }
+  
 
   const getProductQuantity = (id) => {
     const product = cart.find(prod => prod.id === id)
 
     return product?.count
   }
+  
   
   return (
     <CartContext.Provider value={{ cart, addItem, removeItem, getTotal, clearCart, totalQuantity, getProductQuantity }}>
