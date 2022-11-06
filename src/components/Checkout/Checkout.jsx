@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom"
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const navigate = useNavigate();
-    // const total = totalPrice;
+    
   
        const createOrder = async (e) => {
     
@@ -124,5 +124,6 @@ import { useNavigate } from "react-router-dom"
       );
     };
     
-    export default Checkout;
+    
+  export default Checkout
     
