@@ -17,7 +17,7 @@ Install the dependencies and devDependencies and start the server.
 5.- Ready to edit!
 
 ## Deployment Link
-https://proyect-react-talavera-qjx6.vercel.app
+https://proyect-react-talavera.vercel.app
  
  ## Google Drive Link
 https://drive.google.com/file/d/1Jt4aEboZpNmum3RKN5vSa5cp8ZCX24Hj/view?usp=sharing
