@@ -1,5 +1,5 @@
 # Jaquelina Vanesa Talavera 
-## Proyecto E-Commerce - Imagen Iluminación
+## Proyecto E-Commerce - Sushi
 This website is powered by React, HTML5 and Firebase
 
 ## Installation
@@ -8,7 +8,7 @@ Install the dependencies and devDependencies and start the server.
 
 1.- git clone https://github.com/Vanesa38/ProyectReactTalavera.git 
 
-2.- cd proyectoreactCoderhouse
+2.- cd ProyectReactTalavera
 
 3.- npm install | yarn 
 
@@ -17,7 +17,7 @@ Install the dependencies and devDependencies and start the server.
 5.- Ready to edit!
 
 ## Deployment Link
- proyect-react-talavera.vercel.app
+https://proyect-react-talavera-qjx6.vercel.app
  
  ## Google Drive Link
  
