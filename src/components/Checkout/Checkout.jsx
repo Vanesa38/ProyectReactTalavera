@@ -50,10 +50,10 @@ import { useNavigate } from "react-router-dom"
     
           docs.forEach((doc) => {
         const dataDoc = doc.data();
-        const stockDb = dataDoc.stock;
+        const stockDb = dataDoc.stock
     
         const productAddedToCart = cart.find((prod) => prod.id === doc.id);
-        const prodQuantity = productAddedToCart?.quantity;
+        const prodQuantity = productAddedToCart?.count;
     
             if (stockDb >= prodQuantity) {
               batch.update(doc.ref, { stock: stockDb - prodQuantity });
@@ -62,7 +62,7 @@ import { useNavigate } from "react-router-dom"
             }
           });
     
-          if (outOfStock.length === 0) {
+          if (outOfStock.length !== 0) {
             setNotification('error', 'Productos fuera del stock disponible');
           } else {
             await batch.commit();

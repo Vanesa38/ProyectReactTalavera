@@ -17,11 +17,14 @@ const ItemDetail = ({id, img, name, category, price, description, stock }) => {
         const productToAdd = {
             id,
             name,
+            img,
             category,
             price,
-            description
+            description,
+            count
         }
-        addItem (productToAdd, count);
+        
+        addItem (productToAdd);
         setNotification('success', 'Producto agregado')
         setGoToCart(true)
 };

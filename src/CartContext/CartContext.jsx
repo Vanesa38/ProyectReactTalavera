@@ -31,9 +31,8 @@ export const CartContext = createContext({
 
 
 
-  function addItem (productToAdd, count) {
+  function addItem (productToAdd) {
         if (!isInCart(productToAdd.id)) {
-          productToAdd.count = count
             setCart([...cart, productToAdd]);
         } else {
             setCart(

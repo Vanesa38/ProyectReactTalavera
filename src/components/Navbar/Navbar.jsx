@@ -13,24 +13,23 @@ export default function Navbar() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to='/'>
-                              <li id="item">Home</li>
-                            </Link>
+                            <Link to='/'>Home</Link>
+                        </li>
+                            
+                    
+                        <li>
+                            <Link to= '/category/SushiRoll'>SushiRoll</Link>
+        
+                            
                         </li>
                         <li>
-                            <Link to= '/category/SushiRoll'>
-                            <a id="item">SushiRoll</a>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to= '/category/CombinadoSushi'>
-                            <a id="item">CombinadoSushi</a>
-                            </Link>
+                            <Link to= '/category/CombinadoSushi'>CombinadoSushi</Link>
+                            
                         </li>
                         <li >
-                            <a href="">
+                            
                                 <CartWidget />
-                            </a>
+                            
                         </li>
 
                     </ul>
@@ -38,5 +37,6 @@ export default function Navbar() {
             </header>
         </div>
     );
+    
 }
 

@@ -3,7 +3,7 @@ import {useState} from 'react'
 import './ItemCount.css'
 
 
-const ItemCount  = ({stock =5, initial=0, onAdd}) => {
+const ItemCount  = ({stock =0, initial=1, onAdd}) => {
 
     const [count, setCount] = useState (initial)
 
@@ -14,7 +14,7 @@ const ItemCount  = ({stock =5, initial=0, onAdd}) => {
     }
 
     const decrement = () => {
-        if (count > 0){
+        if (count > 1){
         setCount (count -1)
         }
     }

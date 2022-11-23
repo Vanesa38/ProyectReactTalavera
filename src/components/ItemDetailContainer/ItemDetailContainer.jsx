@@ -25,7 +25,11 @@ const ItemDetailContainer =() => {
             setLoading(false)
         })
         
-    }, [])
+    }, [productId])
+
+    if(loading){
+        console.log("...")
+    }
 
 
     return  (
